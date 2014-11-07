@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="/home/sami/Android/AndroidStudioProjects/FruitsWikiAlpha/app/src/androidTest/res" />
+        <source path="/home/sami/Android/AndroidStudioProjects/FruitsWikiAlpha/app/build/generated/res/rs/test/arm/debug" />
+        <source path="/home/sami/Android/AndroidStudioProjects/FruitsWikiAlpha/app/build/generated/res/generated/test/arm/debug" />
+    </dataSet>
+    <dataSet config="androidTestArm" >
+        <source path="/home/sami/Android/AndroidStudioProjects/FruitsWikiAlpha/app/src/androidTestArm/res" />
+    </dataSet>
+
+</merger>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/home/sami/Android/AndroidStudioProjects/FruitsWikiAlpha/app/build/intermediates/pre-dexed/arm/debug/classes-cc9819d0d0c8e1e63614f8a39dabd184a3cff822.jar"
+        jar="/home/sami/Android/AndroidStudioProjects/FruitsWikiAlpha/app/build/intermediates/exploded-aar/FruitsWikiAlpha.libraries/opencv/unspecified/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="2ad6a3efcf38c9f3f22f9e3c3f050f64efdf7855"/>
+
+</pre-dex-items>

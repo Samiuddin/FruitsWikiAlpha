@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="/home/sami/Android/AndroidStudioProjects/FruitsWikiAlpha/app/src/androidTest/assets" />
+    </dataSet>
+    <dataSet config="arm" >
+        <source path="/home/sami/Android/AndroidStudioProjects/FruitsWikiAlpha/app/src/androidTestArm/assets" />
+    </dataSet>
+
+</merger>

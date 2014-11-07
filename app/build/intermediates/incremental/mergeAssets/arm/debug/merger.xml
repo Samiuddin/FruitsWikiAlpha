@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="unspecified" >
+        <source path="/home/sami/Android/AndroidStudioProjects/FruitsWikiAlpha/app/build/intermediates/exploded-aar/FruitsWikiAlpha.libraries/opencv/unspecified/assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/home/sami/Android/AndroidStudioProjects/FruitsWikiAlpha/app/src/main/assets" />
+    </dataSet>
+    <dataSet config="arm" >
+        <source path="/home/sami/Android/AndroidStudioProjects/FruitsWikiAlpha/app/src/arm/assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/home/sami/Android/AndroidStudioProjects/FruitsWikiAlpha/app/src/debug/assets" />
+    </dataSet>
+    <dataSet config="armDebug" >
+        <source path="/home/sami/Android/AndroidStudioProjects/FruitsWikiAlpha/app/src/armDebug/assets" />
+    </dataSet>
+
+</merger>

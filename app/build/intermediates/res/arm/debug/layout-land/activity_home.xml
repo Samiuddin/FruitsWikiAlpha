@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.samiuddin.sami.fruitswikialpha.HomeActivity">
+
+    <SurfaceView
+        android:id="@+id/CameraView"
+        android:layout_width="500dp"
+        android:layout_height="275dp"
+        android:layout_gravity = "center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/StartStopButton" />
+
+    <Button
+        android:id="@+id/StartStopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_stop"
+        android:onClick="onBtnClick"
+        android:layout_gravity = "bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/CameraView"
+        android:layout_alignStart="@+id/CameraView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholder"
+        android:id="@+id/textView"
+        android:layout_gravity = "center"
+        android:layout_toEndOf="@+id/StartStopButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/CameraView"
+        android:layout_alignEnd="@+id/CameraView"
+        android:layout_alignTop="@+id/StartStopButton"
+        android:layout_toRightOf="@+id/StartStopButton" />
+
+</RelativeLayout>
+<!-- From: file:/home/sami/Android/AndroidStudioProjects/FruitsWikiAlpha/app/src/main/res/layout-land/activity_home.xml -->

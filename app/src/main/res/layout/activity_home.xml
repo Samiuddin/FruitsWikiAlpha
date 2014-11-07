@@ -1,4 +1,5 @@
-<!-- THIS LAYOUT IS CAUSING VIDEO TO BE SHRUNK -->
+<!-- THIS LAYOUT IS CAUSING VIDEO TO BE SHRUNK
+     TRY SOMETHING AFTER CODING (DURING TESTING PHASE)-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:opencv="http://schemas.android.com/apk/res-auto"

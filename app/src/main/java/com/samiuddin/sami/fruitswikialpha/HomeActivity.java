@@ -80,7 +80,7 @@ public class HomeActivity extends Activity implements CvCameraViewListener2{
         mOpenCvCameraView.setCvCameraViewListener(this);
 
         tView = (TextView)findViewById(R.id.tView);
-        tView.setText(FindFeatures(mGray.getNativeObjAddr(), mRgba.getNativeObjAddr()));
+        //tView.setText(FindFeatures(mRgba.getNativeObjAddr(),mGray.getNativeObjAddr()));
     }
 
     @Override

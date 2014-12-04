@@ -23,13 +23,20 @@ COMMAND TO COMPILE THIS FILE INTO .SO:
 #include <iostream>
 #include <cmath>
 
+#include <opencv2/opencv.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/ml/ml.hpp>
+
+
 using namespace std;
 using namespace cv;
 
 extern "C" {
-JNIEXPORT void JNICALL Java_com_samiuddin_sami_fruitswikialpha_HomeActivity_FindFeatures(JNIEnv*, jobject, jlong addrGray, jlong addrRgba);
+JNIEXPORT float JNICALL Java_com_samiuddin_sami_fruitswikialpha_HomeActivity_FindFeatures(JNIEnv*, jobject, jlong addrGray, jlong addrRgba);
 
-JNIEXPORT void JNICALL Java_com_samiuddin_sami_fruitswikialpha_HomeActivity_FindFeatures(JNIEnv* env, jobject jobj, jlong addrGray, jlong addrRgba) {
+JNIEXPORT float JNICALL Java_com_samiuddin_sami_fruitswikialpha_HomeActivity_FindFeatures(JNIEnv* env, jobject jobj, jlong addrGray, jlong addrRgba) {
 
         Mat& mGr  = *(Mat*)addrGray;
         Mat& mRgb = *(Mat*)addrRgba;
@@ -39,8 +46,10 @@ JNIEXPORT void JNICALL Java_com_samiuddin_sami_fruitswikialpha_HomeActivity_Find
         //FastFeatureDetector detector(50);
         //detector.detect(mGr, v); // DETECTS FAST LIKE REALLY FAST
 
-        OrbFeatureDetector detector(200);
+
+        OrbFeatureDetector detector(100);
         detector.detect(mGr, v); // ORB DETECTS LESS THAN FAST AND IT IS SLOW (but not unusually slow)
+        OrbDescriptorExtractor extractor(100);
 
         //SiftFeatureDetector detector(50); //It is a non-free module
         //detector.detect(mGr, v); // It is patented, so I am not using it
@@ -74,6 +83,13 @@ JNIEXPORT void JNICALL Java_com_samiuddin_sami_fruitswikialpha_HomeActivity_Find
             Scalar color = Scalar( rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255) );
             drawContours(mRgb, contours, idx, color, CV_FILLED, 8, hierarchy);
         }*/
+
+        Mat sampleMat(1, 100, CV_32FC1, extractor);
+        CvSVM *svm = new CvSVM;
+        svm.load("svmSavePath.xml");
+        float res = svm.predict(sampleMat);
+
+        return (*env)->NewStringUTF(env, res);
   }
 
 }

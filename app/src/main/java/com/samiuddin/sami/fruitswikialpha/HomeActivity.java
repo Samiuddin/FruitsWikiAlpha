@@ -78,6 +78,9 @@ public class HomeActivity extends Activity implements CvCameraViewListener2{
         mOpenCvCameraView = (CameraBridgeViewBase) findViewById(R.id.CameraView);
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
         mOpenCvCameraView.setCvCameraViewListener(this);
+
+        tView = (TextView)findViewById(R.id.tView);
+        tView.setText(FindFeatures(mGray.getNativeObjAddr(), mRgba.getNativeObjAddr()));
     }
 
     @Override
